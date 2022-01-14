@@ -4,9 +4,8 @@ let weapons = ['rock', 'paper', 'scissors'];
 
 function playerPlay() {
     let playerSelection = prompt("Choose your weapon!");
-    console.log("You picked: ", playerSelection);
     return playerSelection;
-  }
+}
 
 // randomize the computer's play
 
@@ -17,9 +16,6 @@ function computerPlay() {
 }
 
 // play one round of rock paper scissors
-
-const playerSelection = playerPlay().toLowerCase();
-const computerSelection = computerPlay();
 
 
     function playRound(playerSelection, computerSelection) {
@@ -40,9 +36,19 @@ const computerSelection = computerPlay();
         }
     }
 
+// keep count of the scores
+
 let playerScore = 0;
 let computerScore = 0;
 let drawTimes = 0;
 
-    result = playRound(playerSelection,computerSelection);
-    console.log(result);
+// plays the game until someone gets to 5 points
+
+    while (playerScore < 5 && computerScore < 5) {
+        const playerSelection = playerPlay();
+        const computerSelection = computerPlay();
+        alert(playRound(playerSelection, computerSelection))
+    }
+    
+// message at the end of the game, with a count of the score
+alert(`Match is over! The results are:  \n You: ${playerScore}  \n Computer: ${computerScore}  \n Draws: ${drawTimes}`)
