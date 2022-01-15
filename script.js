@@ -44,11 +44,12 @@ let drawTimes = 0;
 
 // plays the game until someone gets to 5 points
 
+function game() {
     while (playerScore < 5 && computerScore < 5) {
         const playerSelection = playerPlay();
         const computerSelection = computerPlay();
         alert(playRound(playerSelection, computerSelection))
     }
-    
 // message at the end of the game, with a count of the score
 alert(`Match is over! The results are:  \n You: ${playerScore}  \n Computer: ${computerScore}  \n Draws: ${drawTimes}`)
+}
