@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(214, 208, 123);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    max-width: 100%;
+    max-height: auto;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 2%;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+#intro-container {
+    margin: 2%;
+    padding: 2%;
+    background-color: rgb(182, 176, 96);
+}
+
+#choices-container button {
+    padding: 3%;
+    background: none;
+    border: none;
+    font-size: 5rem;
+}
+
+#choices-container button:hover {
+    color: rgb(153, 148, 74);
+}
+
+#score-container {
+    width: 20%;
+    margin: 3% auto;
+    padding: 1%;
+    border: 3px white solid; 
+    border-radius: 10px;
+    font-size: 3rem;
+    text-align: center;
+    padding: 1%;
+    position: relative;
+}
+
+.labels {
+    background-color: red;
+    color: white;
+    font-size: 1rem;
+    padding: 1% 2%;
+}
+
+#player-label {
+    position: absolute;
+    top: 35%;
+    left: -10%;
+}
+
+#computer-label {
+    position: absolute;
+    top: 35%;
+    right: -13%;
+}
+
+#result-container {
+    font-size: 2rem;
+    margin-bottom: 3%;
+}
+
+#reset-game button {
+    padding: 1% 2% 1% 2%;
+    background: rgb(182, 176, 96);
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+#restart-game button:hover {
+    color: white;
+}
