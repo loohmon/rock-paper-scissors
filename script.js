@@ -9,39 +9,6 @@ const scissorsChoice = document.querySelector('#scissors')
 let playerScore = 0;
 let computerScore = 0;
 
-// // define what the player's selection is
-
-// function playerPlay() {
-//     let playerChoice = prompt("Choose your weapon!");
-//     return playerChoice;
-// }
-
-// // randomize the computer's play
-
-// function computerPlay() {
-//     let computerSelection = weapons[Math.floor(Math.random() * weapons.length)];
-//     return computerSelection;
-// }
-
-// play one round of rock paper scissors
-
-
-    // function playRound(playerChoice, computerSelection) {
-
-
-
-// plays the game until someone gets to 5 points
-
-function game() {
-    while (playerScore < 5 && computerScore < 5) {
-        const playerChoice = playerPlay();
-        const computerSelection = computerPlay();
-        alert(playRound(playerChoice, computerSelection))
-    }
-// message at the end of the game, with a count of the score
-alert(`Match is over! The results are:  \n You: ${playerScore}  \n Computer: ${computerScore}  \n Draws: ${drawTimes}`)
-}
-
 function capsFirstLetter(s) {
     return s.charAt(0).toUpperCase() + s.slice(1);
   }
