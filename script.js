@@ -7,16 +7,6 @@ const choices = document.querySelectorAll('#choices-container button')
 let playerScore = 0;
 let computerScore = 0;
 
-function game() {
-    while (playerScore < 5 && computerScore < 5) {
-        const playerChoice = playerPlay();
-        const computerSelection = computerPlay();
-        alert(playRound(playerChoice, computerSelection))
-    }
-// message at the end of the game, with a count of the score
-alert(`Match is over! The results are:  \n You: ${playerScore}  \n Computer: ${computerScore}  \n Draws: ${drawTimes}`)
-}
-
 function capsFirstLetter(s) {
     return s.charAt(0).toUpperCase() + s.slice(1);
   }
@@ -24,6 +14,7 @@ function capsFirstLetter(s) {
 function playRound(e) {
     const computerSelection = computerChoice();
     const playerChoice = e.target.id;
+    if (playerScore < 5 && computerScore < 5) {
     if (playerChoice === "rock" && computerSelection == "scissors" || playerChoice === 'scissors' && computerSelection === "paper" || playerChoice === 'paper' && computerSelection === "rock") {
         playerScore++;
         score();
@@ -40,6 +31,13 @@ function playRound(e) {
     }
     else {
         return "Invalid play!"
+    }
+}
+    if (playerScore === 5) {
+        resultDisplay.innerHTML = "Game over! You won!";
+    }
+    if (computerScore === 5) {
+        resultDisplay.innerHTML = "Game over! You lost!";
     }
 }
 
